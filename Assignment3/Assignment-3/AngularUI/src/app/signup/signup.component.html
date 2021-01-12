@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<h1>Joint Commission Resources</h1>
+</nav>
+
+<div class="signup-form">
+    <form  #Form="ngForm" (ngSubmit)="onsubmit(Form.value)">
+		<h2>Sign Up</h2>
+		<hr>
+        <div class="form-group">
+		
+			<input type="text" class="form-control" name="fname" placeholder="Enter Your First Name" required
+			[(ngModel)]="cust.fname" #fname="ngModel">
+			<div [hidden]="fname.valid || fname.pristine"
+			class="alert alert-danger">
+		 Firstname is required
+	   </div> 
+		</div>
+		<div class="form-group">
+				<input type="text" class="form-control" name="lname" placeholder="Enter Your Last Name" required
+				[(ngModel)]="cust.lname" #lname="ngModel" >
+				<div [hidden]="lname.valid || lname.pristine"
+				class="alert alert-danger">
+			 Lastname is required
+		   </div> 
+		</div>
+        <div class="form-group">
+			<input type="teL" class="form-control" name="phone" placeholder="Enter Your Phone No." pattern="[7-9]{1}[0-9]{9}"
+			 required 
+			[(ngModel)]="cust.phone" #phone="ngModel">
+			<div [hidden]="phone.valid || phone.pristine"
+			class="alert alert-danger">
+		 Phone no. is required
+	   </div> 
+		</div>
+		<label>Sign Up As:</label>
+		<div class="form-group">
+			
+
+<select id="usertype" [(ngModel)]="cust.role" #role="ngModel" name="role">
+	<option value="User">User</option>
+  <option value="Admin">Admin</option>
+  
+  </select>
+          </div>        
+       
+		
+        <button type="submit" class="btn btn-primary ">Sign Up</button>
+		
+		<button type="reset" class="btn btn-danger" id="reset" >Reset</button>
+    
+    </form>
+	
+</div>
+

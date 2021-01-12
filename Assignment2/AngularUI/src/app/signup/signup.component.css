@@ -1,0 +1,25 @@
+.signup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 535px;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.3);
+}
+#reset {
+    margin-left: 44%;
+}
+#usertype {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    padding: 8px 16px;
+    color:  #4f97e9;
+    cursor: pointer;
+    text-align: center;
+}

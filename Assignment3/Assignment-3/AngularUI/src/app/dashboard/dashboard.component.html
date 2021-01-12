@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h1>Joint Commission Resources</h1>
+    <div style="position:absolute; right:25px;"><a routerLink="/">LogOut</a></div>
+</nav>
+
+<br>
+<table align="center" style = "position:relative;">
+    <tr>
+       
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone No.</th>
+    </tr>
+    <tr *ngFor="let userlist of list">
+      
+        <td>{{userlist.fname}}</td>
+        <td>{{userlist.lname}}</td>
+        <td>{{userlist.phone}}</td>
+        &nbsp; &nbsp;
+        <td><button (click)="Edit(userlist)">Edit</button></td>
+        &nbsp; &nbsp;
+        <td><button  (click)="Delete(userlist.id)">Delete</button></td>
+    </tr>
+</table>

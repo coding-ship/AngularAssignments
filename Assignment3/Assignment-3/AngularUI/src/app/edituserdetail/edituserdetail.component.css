@@ -1,0 +1,14 @@
+.edit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 480px;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.3);
+}
+#reset {
+    margin-left: 51%;
+}
